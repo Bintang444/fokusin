@@ -2,7 +2,7 @@ let currentMode = "pomodoro";
 
 const timerSettings = {
   pomodoro: 25,
-  short: 0.01,
+  short: 1,
   long: 15,
 };
 
