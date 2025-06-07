@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Fokusin - Pomodoro Timer</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <div class="container">
+    <h1>🧠 Fokusin</h1>
+
+    <div class="mode-selector">
+  <button data-mode="pomodoro" class="mode active">Pomodoro</button>
+  <button data-mode="short" class="mode">Short Break</button>
+  <button data-mode="long" class="mode">Long Break</button>
+</div>
+
+<div id="timer">
+  <h2 id="time">25:00</h2>
+  <div class="buttons">
+    <button id="start">Start</button>
+    <button id="pause">Pause</button>
+    <button id="reset">Reset</button>
+  </div>
+</div>
+
+<div class="todo">
+  <h3>🎯 Tugas Hari Ini</h3>
+  <input type="text" id="taskInput" placeholder="Tulis tugas..." />
+  <button id="addTask">Tambah</button>
+  <ul id="taskList"></ul>
+</div>
+
+<div class="color-picker">
+  <label for="colorPicker">Tema Warna:</label>
+  <input type="color" id="colorPicker" />
+</div>
+
+    <audio id="alarmSound" src="alarm.mp3" preload="auto"></audio>
+
+  <script src="script.js"></script>
+</body>
+</html>
