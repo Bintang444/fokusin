@@ -2,7 +2,7 @@ let currentMode = "pomodoro";
 
 const timerSettings = {
   pomodoro: 25,
-  short: 1,
+  short: 0.2,
   long: 15,
 };
 
@@ -141,10 +141,8 @@ const alarm = document.getElementById("alarmSound");
 
 // Timer berakhir
 function onTimerEnd() {
-  alarm.play().catch(() => {
-    alert("Klik start dulu supaya audio bisa diputar");
-  });
-  alert("Waktunya habis bro! 💆‍♂️");
-  alarm.pause();
+  alarm.play(); // Mainkan suara
+  alert("Waktunya habis bro! 💆‍♂️"); // atau notif lain
+  alarm.pause(); // Langsung stop
   alarm.currentTime = 0;
 }
