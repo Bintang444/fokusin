@@ -141,8 +141,10 @@ const alarm = document.getElementById("alarmSound");
 
 // Timer berakhir
 function onTimerEnd() {
-  alarm.play(); // Mainkan suara
-  alert("Waktunya habis bro! 💆‍♂️"); // atau notif lain
-  alarm.pause(); // Langsung stop
+  alarm.play().catch(() => {
+    alert("Klik start dulu supaya audio bisa diputar");
+  });
+  alert("Waktunya habis bro! 💆‍♂️");
+  alarm.pause();
   alarm.currentTime = 0;
 }
